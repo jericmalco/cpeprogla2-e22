@@ -1,36 +1,16 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-
-char* myStrCmp(char* str1,char* str2){
+int main()
+{
+	char str1[10];
+	char str2[10];
 	
-	switch(strcmp(str1, str2)){
-		case -1:
-			cout<<"negative";
-			break;
-		case 0:
-			cout<<"equal";
-			break;
-		case 1:
-		cout<<"positive";
-			break;
-	}
-	
-}
-
-void myStrCpy(char* str1,char* str2){
-	strcpy(str1, str2);
-}
-void myStrCat(char* str1,char* str2){
-	strcpy(str1, str2);
-}
-
-int main(){
-	char str1[100]="Hello";
-	char str2[100]="hello";
-	
-	myStrCmp(str1,str2);
-	myStrCpy(str1,str2);
-	myStrCat(str1,str2)
-	cout<<str1;
+	cout<<"Enter the first word (str1): ";
+	cin.getline(str1,10);
+	cout<<"Enter the second word (str2): ";
+	cin.getline(str2,10) ;
+	strcat(str1, str2);
+	cout<<"New string value for str1: "<<str1;
+	return 0;
 }
